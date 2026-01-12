@@ -42,7 +42,7 @@ const App: React.FC = () => {
   const [mode, setMode] = useState<ToolMode>(ToolMode.IDLE);
   const [hasApiKey, setHasApiKey] = useState(false);
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [passwordInput, setPasswordInput] = useState("");
   const PASSWORD_HASH = process.env.PASSWORD_HASH;
 
@@ -264,7 +264,8 @@ const App: React.FC = () => {
         {/* Sidebar */}
         <aside className="w-full lg:w-[400px] bg-white border-b lg:border-r fromental-border p-10 flex flex-col gap-10 overflow-y-auto">
           {/* Auth Warning */}
-          {!hasApiKey && (
+
+          {/*{!hasApiKey && (
             <div className="border fromental-border p-6 text-center">
               <p className="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-4">
                 API Access Required
@@ -276,7 +277,7 @@ const App: React.FC = () => {
                 Select API Key
               </button>
             </div>
-          )}
+          )} */}
 
           {/* Media Selection */}
           <section>
